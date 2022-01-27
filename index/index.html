@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <script src="index.js"></script>
+    <title>IP Address Tracker</title>
+</head>
+
+<body>
+    <div id="input">
+        <div id="img"><img src="media/pattern-bg.png" alt="" width="100%"></div>
+        <h2>IP Address Tracker</h2>
+        <div id="IP">
+            <input id="inputIP" type="text" placeholder="Search for any IP address or domain"
+                onclick="this.placeholder=''"
+                onblur="if(this.placeholder=='')this.placeholder='Search for any IP address or domain'; foco=false"
+                onfocus="foco=true">
+            <input type="button" value=">" id="botonSend">
+        </div>
+    </div>
+
+    <div id="output">
+        <div id="tabla">
+            <table style="width: 800px;">
+                <tr style="height: 20px;"></tr>
+                <tr style="height: 25px; font-size: 10px; font-weight: 600;">
+                    <td class="linea" style="color: hsl(0, 0%, 59%); width: 200px; padding: 0 20px;">IP ADDRESS</td>
+                    <td class="linea" style="color: hsl(0, 0%, 59%); width: 200px; padding: 0 20px;">LOCATION</td>
+                    <td class="linea" style="color: hsl(0, 0%, 59%); width: 200px; padding: 0 20px;">TIMEZONE</td>
+                    <td style="color: hsl(0, 0%, 59%); width: 200px; padding: 0 20px;">ISP</td>
+                </tr>
+                <tr style="height: 50px; vertical-align: top; font-size: 18px; font-weight: 700;">
+                    <td id="outputIP" class="linea" style="width: 200px; padding: 0 20px;">IP ADDRESS</td>
+                    <td id="outputLocation" class="linea" style="width: 200px; padding: 0 20px;">LOCATION</td>
+                    <td id="outputTimeZone" class="linea" style="width: 200px; padding: 0 20px;">TIMEZONE</td>
+                    <td id="outputISP" style="width: 200px; padding: 0 20px;">ISP</td>
+                </tr>
+                <tr style="height: 20px;"></tr>
+            </table>
+        </div>
+        <div id="map">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d63141782.451334655!2d-2.970703!3d15!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2sco!4v1643168019011!5m2!1ses!2sco"
+                width="100%" height="621px" style="border:0;" allowfullscreen="true" loading="lazy"></iframe>
+        </div>
+    </div>
+</body>
+
+</html>
